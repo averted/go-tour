@@ -43,10 +43,12 @@ var (
 func main() {
 	const format = "%T(%v)\n"
 
-	var i int
+	var i int = 42
 	var f float64
 	var b bool
 	var s string
+
+	v := 42
 
 	fmt.Printf(format, ToBe, ToBe)
 	fmt.Printf(format, MaxInt, MaxInt)
@@ -54,4 +56,11 @@ func main() {
 	fmt.Printf(format, z, z)
 
 	fmt.Printf("\n%v, %v, %v, %q\n", i, f, b, s)
+
+	// type conversions
+	flt := float64(i)
+
+	fmt.Println(flt)
+
+	fmt.Printf("v is of type %T\n", v)
 }
