@@ -11,6 +11,7 @@ func add(x, y int) int {
 	return x + y
 }
 
+// multiple return values
 func swap(x, y string) (string, string) {
 	return y, x
 }
